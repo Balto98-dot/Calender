@@ -1,0 +1,84 @@
+/* Estilo para el calendario */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
+  gap: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.day {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.day:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Estilo para el fin de semana */
+.day.saturday {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.day.sunday {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+/* Estilo para la sección de actividades */
+#activities {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #e9ecef;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+li:nth-child(odd) {
+  background-color: #d6e9f7; /* Color de fondo alternado para las actividades */
+}
+
+li:nth-child(even) {
+  background-color: #c3e6cb;
+}
+
+li:hover {
+  background-color: #ffc107;
+  cursor: pointer;
+}
+
+.no-activity {
+  color: #888;
+  font-style: italic;
+}
